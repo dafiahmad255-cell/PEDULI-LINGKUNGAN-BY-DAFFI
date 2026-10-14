@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EcoCare — Bersama Menjaga Bumi</title>
+<meta name="description" content="EcoCare: website edukasi peduli lingkungan. Mulai kebiasaan kecil untuk bumi yang lebih baik.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Kumpulan ikon (SVG). Dipanggil dengan <use href="#i-nama"/> -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20 4C10 4 5 9 5 15c0 2 .7 3.5 1.5 4.5C8 20.3 10 21 12 21c6 0 8-7 8-17z"/><path d="M5 21c2-5 5-9 10-12"/></symbol>
+  <symbol id="i-recycle" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-15.5 6.2"/><path d="M3 12A9 9 0 0 1 18.5 5.8"/><path d="M18.5 2v4h-4"/><path d="M5.5 22v-4h4"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3c3.5 4.5 6 7.5 6 11a6 6 0 0 1-12 0c0-3.5 2.5-6.5 6-11z"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-tree" viewBox="0 0 24 24"><path d="M12 22v-6"/><path d="M12 16c-4 0-7-2.5-7-6 0-2 1-3.5 2.5-4.5C8 3.5 10 2 12 2s4 1.5 4.5 3.5C18 6.5 19 8 19 10c0 3.5-3 6-7 6z"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 13H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+  <symbol id="i-bin" viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M9 7V4h6v3"/><path d="M6 7l1 14h10l1-14"/><path d="M10 11v6M14 11v6"/></symbol>
+  <symbol id="i-bus" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="14" rx="2"/><path d="M4 11h16"/><path d="M7 20v-3M17 20v-3"/><path d="M8 14h.01M16 14h.01"/></symbol>
+  <symbol id="i-food" viewBox="0 0 24 24"><path d="M7 3v8M5 3v5a2 2 0 0 0 4 0V3"/><path d="M7 11v10"/><path d="M17 3c-2 2-3 5-3 8h3v10"/></symbol>
+  <symbol id="i-bottle" viewBox="0 0 24 24"><path d="M10 2h4v3l1.5 2.5V21a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1V7.5L10 5V2z"/><path d="M8.5 12h7"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5z"/><path d="M4 19a2 2 0 0 1 2-2h13"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.5c2.2.7 3.5 2.6 3.5 5.5"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5L2 9z"/><path d="M6 11.5V17c3 2.5 9 2.5 12 0v-5.5"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6-8 11-8 11z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-handshake" viewBox="0 0 24 24"><path d="M3 12l4-4 4 2 3-2 4 3"/><path d="M3 12l5 5 2-1 1.5 1.5L14 16l1-1 3 3 3-6-3-3"/></symbol>
+</svg>
+
+<a class="skip" href="#konten">Lewati ke konten utama</a>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="index.html" aria-label="EcoCare, kembali ke halaman Home">
+      <span class="logo-mark"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
+      EcoCare
+    </a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Buka menu navigasi">
+      <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+    </button>
+    <nav aria-label="Navigasi utama">
+      <ul class="menu" id="menu">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="edukasi.html">Edukasi Lingkungan</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="konten">
+<section aria-labelledby="h-home">
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1 id="h-home">Bumi Lebih Baik Dimulai dari Kita</h1>
+        <p class="lead">Perubahan besar berawal dari kebiasaan kecil: membawa botol minum, memilah sampah, mematikan lampu yang tidak dipakai. Mulai dari satu langkah hari ini.</p>
+        <div class="btn-row">
+          <a class="btn" href="edukasi.html">Mulai Peduli</a>
+          <a class="btn btn-ghost" href="#aksi">Pelajari Tips</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <svg viewBox="0 0 560 470" role="img" aria-label="Ilustrasi bumi hijau dengan tunas daun tumbuh di atasnya">
+          <defs><clipPath id="globe"><circle cx="280" cy="250" r="165"/></clipPath></defs>
+          <circle cx="470" cy="70" r="40" fill="#F6D58E"/>
+          <ellipse cx="90" cy="90" rx="46" ry="16" fill="#FFFFFF" opacity=".85"/>
+          <ellipse cx="120" cy="78" rx="30" ry="14" fill="#FFFFFF" opacity=".85"/>
+          <ellipse cx="280" cy="440" rx="190" ry="16" fill="#1B4332" opacity=".18"/>
+          <circle cx="280" cy="250" r="165" fill="#5FA8C8"/>
+          <g clip-path="url(#globe)">
+            <path d="M160 215C180 170 240 160 272 182C296 198 274 226 286 250C298 278 262 304 232 294C204 284 212 256 188 250C166 244 150 234 160 215z" fill="#52B788"/>
+            <path d="M312 160C346 142 402 170 414 210C426 244 392 254 376 276C360 298 336 282 342 254C346 230 306 208 312 160z" fill="#2D6A4F"/>
+            <path d="M246 332C274 314 324 320 336 348C342 376 304 394 270 386C240 378 228 350 246 332z" fill="#74C69D"/>
+            <path d="M190 120c30-30 70-40 110-34-40 4-70 14-110 34z" fill="#FFFFFF" opacity=".35"/>
+          </g>
+          <path d="M280 86C280 62 280 48 280 30" stroke="#2D6A4F" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <path d="M280 54C248 54 234 38 230 20C258 20 276 32 280 54z" fill="#52B788"/>
+          <path d="M280 62C312 62 328 46 332 28C304 28 286 40 280 62z" fill="#2D6A4F"/>
+          <g>
+            <rect x="82" y="352" width="8" height="40" rx="3" fill="#8A5A33"/><circle cx="86" cy="338" r="26" fill="#2D6A4F"/>
+            <rect x="468" y="362" width="8" height="34" rx="3" fill="#8A5A33"/><circle cx="472" cy="348" r="22" fill="#52B788"/>
+            <rect x="122" y="378" width="6" height="26" rx="3" fill="#8A5A33"/><circle cx="125" cy="368" r="16" fill="#74C69D"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec" id="alasan">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Mengapa Menjaga Lingkungan Itu Penting</h2>
+        <p>Lingkungan yang sehat adalah syarat dasar hidup kita sehari-hari, bukan sekadar urusan para ahli.</p>
+      </div>
+      <div class="reasons">
+        <div class="reason">
+          <div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></div>
+          <div><h3>Udara dan iklim yang sehat</h3><p>Pohon dan ruang hijau membantu menyegarkan udara dan menahan panas berlebih di sekitar kita.</p></div>
+        </div>
+        <div class="reason">
+          <div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-drop"/></svg></div>
+          <div><h3>Air bersih untuk semua</h3><p>Sampah yang tidak dikelola mencemari sungai dan tanah. Menjaga lingkungan berarti menjaga sumber air minum.</p></div>
+        </div>
+        <div class="reason">
+          <div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></div>
+          <div><h3>Masa depan generasi berikutnya</h3><p>Kebiasaan kita hari ini menentukan kualitas bumi yang diwariskan kepada anak cucu.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec alt" id="aksi">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Aksi Sederhana Setiap Hari</h2>
+        <p>Tidak perlu alat khusus. Pilih satu atau dua kebiasaan di bawah ini, lalu ulangi sampai terasa biasa.</p>
+      </div>
+      <div class="actions">
+        <a class="action" href="edukasi.html"><svg class="icon" aria-hidden="true"><use href="#i-bottle"/></svg><div><strong>Bawa botol minum sendiri</strong><span>Kurangi botol dan gelas plastik sekali pakai.</span></div></a>
+        <a class="action" href="edukasi.html"><svg class="icon" aria-hidden="true"><use href="#i-bag"/></svg><div><strong>Siapkan tas belanja</strong><span>Simpan satu tas lipat di tas harianmu.</span></div></a>
+        <a class="action" href="edukasi.html"><svg class="icon" aria-hidden="true"><use href="#i-bin"/></svg><div><strong>Pisahkan sampah</strong><span>Organik, anorganik, dan sampah berbahaya.</span></div></a>
+        <a class="action" href="edukasi.html"><svg class="icon" aria-hidden="true"><use href="#i-bulb"/></svg><div><strong>Matikan yang tidak dipakai</strong><span>Lampu, kipas, dan pengisi daya.</span></div></a>
+        <a class="action" href="edukasi.html"><svg class="icon" aria-hidden="true"><use href="#i-bus"/></svg><div><strong>Pilih jalan kaki atau angkutan umum</strong><span>Untuk jarak dekat, cukup berjalan kaki.</span></div></a>
+        <a class="action" href="edukasi.html"><svg class="icon" aria-hidden="true"><use href="#i-food"/></svg><div><strong>Habiskan makananmu</strong><span>Ambil secukupnya agar tidak ada yang terbuang.</span></div></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec facts" id="fakta">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Fakta Lingkungan</h2>
+        <p>Beberapa angka berikut menunjukkan mengapa air, makanan, dan energi layak dihemat.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>71%</b><p>permukaan Bumi tertutup air.</p><small>Sumber: USGS</small></div>
+        <div class="stat"><b>2,5%</b><p>dari seluruh air di Bumi adalah air tawar.</p><small>Sumber: USGS</small></div>
+        <div class="stat"><b>±1/3</b><p>makanan yang dihasilkan untuk manusia hilang atau terbuang.</p><small>Sumber: FAO</small></div>
+        <div class="stat"><b>95%</b><p>energi dapat dihemat saat mendaur ulang aluminium dibanding membuat baru.</p><small>Sumber: U.S. EPA</small></div>
+      </div>
+      <p class="note">Angka dibulatkan dan dapat berubah mengikuti pembaruan data. Periksa kembali di situs sumber sebelum dikutip untuk laporan.</p>
+    </div>
+  </div>
+
+  <div class="sec" id="ikut">
+    <div class="wrap pledge">
+      <div>
+        <h2>Ikut Berpartisipasi: Buat Komitmen Hijaumu</h2>
+        <p>Centang aksi yang siap kamu lakukan minggu ini. Pelan-pelan saja, satu aksi yang konsisten lebih berarti daripada sepuluh yang cepat ditinggalkan.</p>
+        <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+        <p id="pledge-status" role="status" aria-live="polite" style="margin:0 0 14px"></p>
+        <div class="btn-row">
+          <a class="btn" href="edukasi.html">Pelajari Caranya</a>
+          <button class="btn btn-ghost" type="button" id="reset">Kosongkan Pilihan</button>
+        </div>
+        <p class="small" style="margin-top:16px">Pilihan hanya tampil di layarmu dan tidak disimpan atau dikirim ke mana pun.</p>
+      </div>
+      <ul class="checks" id="checks">
+        <li><label><input type="checkbox" id="p0"> Membawa botol minum sendiri</label></li>
+        <li><label><input type="checkbox" id="p1"> Membawa tas belanja sendiri</label></li>
+        <li><label><input type="checkbox" id="p2"> Memilah sampah di rumah</label></li>
+        <li><label><input type="checkbox" id="p3"> Mematikan lampu yang tidak dipakai</label></li>
+        <li><label><input type="checkbox" id="p4"> Menutup keran saat tidak digunakan</label></li>
+        <li><label><input type="checkbox" id="p5"> Menanam atau merawat satu tanaman</label></li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="index.html" style="margin-bottom:12px"><span class="logo-mark"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>EcoCare</a>
+        <p style="margin:0">Bersama Menjaga Bumi. Website edukasi peduli lingkungan.</p>
+      </div>
+      <nav aria-label="Navigasi footer">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="profil.html">Profil</a></li>
+          <li><a href="edukasi.html">Edukasi Lingkungan</a></li>
+        </ul>
+      </nav>
+    </div>
+    <small>&copy; 2026 EcoCare. Dibuat sebagai tugas mata kuliah Web Application Design.</small>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
